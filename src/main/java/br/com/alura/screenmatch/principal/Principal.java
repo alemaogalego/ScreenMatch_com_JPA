@@ -92,7 +92,7 @@ public class Principal {
                                 .forEach(System.out::println);
 
 
-        dadosSeries.forEach(System.out::println);
+//        dadosSeries.forEach(System.out::println);
 
     }
 }
