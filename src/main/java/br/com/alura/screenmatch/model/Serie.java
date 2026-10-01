@@ -27,10 +27,10 @@ public class Serie {
     private String poster;
     private String sinopse;
 
-    @OneToMany(mappedBy = "serie")
+    @OneToMany(mappedBy = "serie", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Episodio> episodios = new ArrayList<>();
 
-    protected Serie() {
+    public Serie() {
     }
 
     public Long getId() {
@@ -126,6 +126,7 @@ public class Serie {
 
                 ", atores='" + atores + '\'' +
                 ", poster='" + poster + '\'' +
-                ", sinopse='" + sinopse + '\'' ;
+                ", sinopse='" + sinopse + '\'' +
+                ", episodios=" + episodios + '\'';
     }
 }
